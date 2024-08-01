@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Clone'){
             steps {
-                //  Linnk github //
-                git branch: 'main', url: 'https://github.com/Hasyndeyyy/demojenkins.git'
+                //  Link github //
+                git 'https://github.com/Hasyndeyyy/demojenkins.git'
             }
         }
     }
