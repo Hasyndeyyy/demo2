@@ -1,20 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('Clone'){
+        stage('Clone') {
             steps {
-                //  Link github //
+                // Link github
                 git 'https://github.com/Hasyndeyyy/demojenkins.git'
             }
         }
-        // stage
-        stage('Buil-dockerfile'){
+        stage('Build Docker Image') {
             steps {
-                //  URL dockerfile  //
+                // Đăng nhập vào Docker registry và xây dựng Docker image
                 withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
-                 // some block
-                 sh 'docker build -t danphuong/my-images:lts .'
-                 sh 'docker push danphuong/my-images:lts'
+                    sh 'docker build -t danphuong/my-images:lts .'
+                    sh 'docker push danphuong/my-images:lts'
+                }
             }
         }
     }
