@@ -7,5 +7,6 @@ pipeline {
                 git 'https://github.com/Hasyndeyyy/demojenkins.git'
             }
         }
+        // stage
     }
 }
