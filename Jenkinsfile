@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Clone') {
             steps {
-                git 'https://github.com/Hasyndeyyy/demojenkins.git'
+               git 'https://github.com/Hasyndeyyy/demo1.git'
             }
         }
         stage('Build Docker Image') {
