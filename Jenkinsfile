@@ -4,6 +4,7 @@ pipeline {
         stage('Check Environment') {
             steps {
                 sh 'echo $PATH'
+                sh 'docker --version'
             }
         }
         stage('Clone') {
