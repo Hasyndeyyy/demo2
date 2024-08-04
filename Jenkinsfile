@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = "${PATH};C:\\Program Files\\Docker\\Docker\\resources\\bin"
+    }
     stages {
         stage('Check Environment') {
             steps {
